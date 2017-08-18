@@ -10,22 +10,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LiveEncode/NLAVCapure.swift"
-            timestampString = "524043383.000987"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "createCaptureSection()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LiveEncode/NLAVCapure.swift"
             timestampString = "524047033.815385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -41,13 +25,157 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LiveEncode/ViewController.swift"
-            timestampString = "524049995.901653"
+            filePath = "LiveEncode/AVProcesser.swift"
+            timestampString = "524713012.600917"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "isSameFormat(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveEncode/NLGlobalUtils.swift"
+            timestampString = "524743087.678649"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "saveVideoAsset(withPath:groupName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static LiveEncode.NLGlobalUtils.saveVideoAsset (withPath : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;, groupName : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "LiveEncode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neulion/Documents/mystuff/ffmpeg/LiveEncode/LiveEncode/NLGlobalUtils.swift"
+                  timestampString = "524744110.937066"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static LiveEncode.NLGlobalUtils.(saveVideoAsset (withPath : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;, groupName : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "LiveEncode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neulion/Documents/mystuff/ffmpeg/LiveEncode/LiveEncode/NLGlobalUtils.swift"
+                  timestampString = "524744110.938666"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveEncode/AppDelegate.swift"
+            timestampString = "524743664.184673"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "applicationDidEnterBackground(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveEncode/NLGlobalUtils.swift"
+            timestampString = "524743477.814367"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "saveVideoAsset(withPath:groupName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveEncode/NLGlobalUtils.swift"
+            timestampString = "524743491.437655"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "saveVideoAsset(withPath:groupName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static LiveEncode.NLGlobalUtils.saveVideoAsset (withPath : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;, groupName : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "LiveEncode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neulion/Documents/mystuff/ffmpeg/LiveEncode/LiveEncode/NLGlobalUtils.swift"
+                  timestampString = "524744110.948056"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static LiveEncode.NLGlobalUtils.(saveVideoAsset (withPath : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;, groupName : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;) -&gt; ()).(closure #2)"
+                  moduleName = "LiveEncode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/neulion/Documents/mystuff/ffmpeg/LiveEncode/LiveEncode/NLGlobalUtils.swift"
+                  timestampString = "524744110.949663"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LiveEncode/ViewController.swift"
+            timestampString = "524744100.676176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "enterBackGround()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

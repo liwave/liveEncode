@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870365341F41911B00770529 /* NLAVEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870365331F41911B00770529 /* NLAVEncoder.swift */; };
+		870365361F41923900770529 /* AVProcesser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870365351F41923900770529 /* AVProcesser.swift */; };
 		871E4BA01F3AF22900659AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871E4B9F1F3AF22900659AA4 /* AppDelegate.swift */; };
 		871E4BA21F3AF22900659AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871E4BA11F3AF22900659AA4 /* ViewController.swift */; };
 		871E4BA51F3AF22900659AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871E4BA31F3AF22900659AA4 /* Main.storyboard */; };
@@ -14,9 +16,12 @@
 		871E4BAA1F3AF22900659AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871E4BA91F3AF22900659AA4 /* Assets.xcassets */; };
 		871E4BAD1F3AF22900659AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871E4BAB1F3AF22900659AA4 /* LaunchScreen.storyboard */; };
 		871E4BB71F3AF34300659AA4 /* NLAVCapure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871E4BB61F3AF34300659AA4 /* NLAVCapure.swift */; };
+		874ABA241F45446900B40EDE /* NLGlobalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874ABA231F45446900B40EDE /* NLGlobalUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		870365331F41911B00770529 /* NLAVEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLAVEncoder.swift; sourceTree = "<group>"; };
+		870365351F41923900770529 /* AVProcesser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVProcesser.swift; sourceTree = "<group>"; };
 		871E4B9C1F3AF22900659AA4 /* LiveEncode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveEncode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		871E4B9F1F3AF22900659AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		871E4BA11F3AF22900659AA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		871E4BAC1F3AF22900659AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		871E4BAE1F3AF22900659AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		871E4BB61F3AF34300659AA4 /* NLAVCapure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLAVCapure.swift; sourceTree = "<group>"; };
+		874ABA231F45446900B40EDE /* NLGlobalUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLGlobalUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		871E4B9E1F3AF22900659AA4 /* LiveEncode */ = {
 			isa = PBXGroup;
 			children = (
+				874ABA221F45440100B40EDE /* Tools */,
 				871E4BB51F3AF2F000659AA4 /* Capture */,
 				871E4B9F1F3AF22900659AA4 /* AppDelegate.swift */,
 				871E4BA11F3AF22900659AA4 /* ViewController.swift */,
@@ -74,8 +81,18 @@
 			isa = PBXGroup;
 			children = (
 				871E4BB61F3AF34300659AA4 /* NLAVCapure.swift */,
+				870365331F41911B00770529 /* NLAVEncoder.swift */,
+				870365351F41923900770529 /* AVProcesser.swift */,
 			);
 			name = Capture;
+			sourceTree = "<group>";
+		};
+		874ABA221F45440100B40EDE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				874ABA231F45446900B40EDE /* NLGlobalUtils.swift */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				871E4BB71F3AF34300659AA4 /* NLAVCapure.swift in Sources */,
+				870365341F41911B00770529 /* NLAVEncoder.swift in Sources */,
 				871E4BA21F3AF22900659AA4 /* ViewController.swift in Sources */,
 				871E4BA81F3AF22900659AA4 /* LiveEncode.xcdatamodeld in Sources */,
 				871E4BA01F3AF22900659AA4 /* AppDelegate.swift in Sources */,
+				870365361F41923900770529 /* AVProcesser.swift in Sources */,
+				874ABA241F45446900B40EDE /* NLGlobalUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +345,7 @@
 				871E4BB31F3AF22900659AA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

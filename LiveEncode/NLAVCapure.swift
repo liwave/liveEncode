@@ -9,17 +9,14 @@
 import UIKit
 import AVFoundation
 
-class NLAVCapure: NSObject {
+class NLAVCapure: AVProcesser {
     
     var captureSession:AVCaptureSession!
-    func startCapture() -> Bool{
-        if(!self.createCaptureSection()){
-            return false
-        }
-        captureSession.startRunning()
-        
-        return true
-    }
+    var connectAudio:AVCaptureConnection?
+    var connectVideo:AVCaptureConnection?
+    var outVideoFormat:NLMediaFormatInfo!
+    var outAudioFormat:NLMediaFormatInfo!
+    
     func createCaptureSection() -> Bool{
         captureSession = AVCaptureSession.init()
         
@@ -39,6 +36,7 @@ class NLAVCapure: NSObject {
         guard let connectAudio = audioOutput.connection(withMediaType: AVMediaTypeAudio) else{
             return false
         }
+        self.connectAudio = connectAudio
         
         let videoDevice = try? AVCaptureDeviceInput.init(device: AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo))
         if !captureSession.canAddInput(videoDevice){
@@ -58,22 +56,64 @@ class NLAVCapure: NSObject {
         guard let connectVideo = videoOutput.connection(withMediaType: AVMediaTypeVideo) else {
             return false
         }
+        self.connectVideo = connectVideo
         return true
     }
     
     func getPreviewLayer() -> AVCaptureVideoPreviewLayer{
        return AVCaptureVideoPreviewLayer.init(session:captureSession)
     }
+    
+    override init() {
+        outVideoFormat = NLMediaFormatInfo(type: .mediaVideo, subtype: .video32BGRA)
+        outAudioFormat = NLMediaFormatInfo(type: .mediaAudio, subtype: .audioPCM)
+    }
+    override func startProcess() -> Bool{
+        if(!self.createCaptureSection()){
+            return false
+        }
+        captureSession.startRunning()
+        self.isStarted = true
+        return true
+    }
+    override func stopProcess() -> Bool{
+        captureSession.stopRunning()
+        self.isStarted = false
+        return true
+    }
 }
 
-extension NLAVCapure: AVCaptureAudioDataOutputSampleBufferDelegate{
+extension NLAVCapure: AVCaptureAudioDataOutputSampleBufferDelegate,AVCaptureVideoDataOutputSampleBufferDelegate{
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
         
+        let time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
+        guard let discription = CMSampleBufferGetFormatDescription(sampleBuffer) else {
+            return
+        }
+        
+        if  self.connectVideo == connection {
+            let videoDimension = CMVideoFormatDescriptionGetDimensions(discription)
+            let subType = CMFormatDescriptionGetMediaSubType(discription)
+            var mediaFormat = NLMediaFormatInfo(type: .mediaVideo, subtype: .video32BGRA)
+            var nlSample = NLMediaSample()
+            nlSample.DTS = time.value*1000/Int64(time.timescale)
+            nlSample.sampleBuffer = sampleBuffer
+            nlSample.mediaFormat = mediaFormat
+            sendOutSample(nlSample)
+            
+        }else if self.connectAudio == connection{
+            var mediaFormat = NLMediaFormatInfo(type: .mediaAudio, subtype: .audioPCM)
+            var nlSample = NLMediaSample()
+            nlSample.DTS = time.value*1000/Int64(time.timescale)
+            nlSample.sampleBuffer = sampleBuffer
+            nlSample.mediaFormat = mediaFormat
+            sendOutSample(nlSample)
+        }
     }
 }
 
-extension NLAVCapure: AVCaptureVideoDataOutputSampleBufferDelegate{
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didDrop sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
-        
-    }
-}
+//extension NLAVCapure: AVCaptureVideoDataOutputSampleBufferDelegate{
+//    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+//        
+//    }
+//}
